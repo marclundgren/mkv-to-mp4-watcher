@@ -1,0 +1,17 @@
+{
+  "name": "mkv-to-mp4-watcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && node --experimental-wasm-threads index.js",
+    "test": "clear && node --experimental-wasm-threads test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg/core": "^0.10.0",
+    "@ffmpeg/ffmpeg": "^0.10.1",
+    "chokidar": "^3.5.2"
+  }
+}
