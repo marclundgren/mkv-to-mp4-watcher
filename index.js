@@ -5,6 +5,7 @@ const watchPath = process.env.DIR || "/watch";
 
 // mkv to mp4
 chokidar.watch([`${watchPath}/**/*.mkv`]).on("all", (event, filePath) => {
+  console.log(`watch: ${event} ${filePath}`);
   if (event === "add") {
     convert(filePath)
       .catch(console.error)
