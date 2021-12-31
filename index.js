@@ -3,15 +3,15 @@ const convert = require("./convert");
 const fs = require("fs");
 const path = require("path");
 
-const watchPath = process.env.WATCH || "**/*.mkv";
+const watchPath = process.env.DIR || "/watch";
 
 // mkv to mp4
-chokidar.watch(watchPath.split(","), {}).on("all", (event, filePath) => {
+chokidar.watch([`${watchPath}/**/*.mkv`]).on("all", (event, filePath) => {
   if (event === "add") {
     convert(filePath)
-      .catch(console.errorgs)
-      .then(() => {
-        fs.promises.unlink(path.join(__dirname, filePath));
+      .catch(console.error)
+      .then((res) => {
+        console.log(`done ${res}`);
       });
   }
 });

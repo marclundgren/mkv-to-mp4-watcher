@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "up": "docker build . -t marclundgren/node-mkv-to-mp4-watcher && docker-compose up",
     "start": "clear && node --experimental-wasm-threads index.js",
     "test": "clear && node --experimental-wasm-threads test.js"
   },
@@ -12,6 +13,7 @@
   "dependencies": {
     "@ffmpeg/core": "^0.10.0",
     "@ffmpeg/ffmpeg": "^0.10.1",
-    "chokidar": "^3.5.2"
+    "chokidar": "^3.5.2",
+    "mutexify": "^1.4.0"
   }
 }
