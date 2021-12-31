@@ -1,7 +1,5 @@
 const chokidar = require("chokidar");
 const convert = require("./convert");
-const fs = require("fs");
-const path = require("path");
 
 const watchPath = process.env.DIR || "/watch";
 
