@@ -13,3 +13,5 @@ chokidar.watch([`${watchPath}/**/*.mkv`]).on("all", (event, filePath) => {
       });
   }
 });
+
+console.log(`watching ${watchPath}`);
