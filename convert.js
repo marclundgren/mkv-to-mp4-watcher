@@ -21,10 +21,12 @@ async function convert(filePath) {
       inExtension: IN_EXTENTION,
     };
     write(writeConfig, () => {
+      console.log(`removing ${filePath}`);
       fs.unlink(filePath, (err) => {
         if (err) {
           reject(err);
         } else {
+          console.log(`removed ${filePath}`);
           resolve(absolutePath);
         }
       });
