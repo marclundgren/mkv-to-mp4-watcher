@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "push": "docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t marclundgren/node-mkv-to-mp4-watcher:latest --push .",
     "up": "docker build . -t marclundgren/node-mkv-to-mp4-watcher && docker-compose up",
     "start": "clear && node --experimental-wasm-threads index.js",
     "test": "clear && node --experimental-wasm-threads test.js"
