@@ -1,0 +1,9 @@
+version: "3"
+services:
+  mkv-to-mp4-watcher:
+    image: marclundgren/node-mkv-to-mp4-watcher:latest
+    volumes:
+      - ../mkvtest:/watch
+    # environment:
+    # # - WATCH="../mkvtest/**/*.mkv"
+    # - DIR="../mkvtest"
