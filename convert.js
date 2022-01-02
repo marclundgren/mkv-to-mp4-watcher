@@ -14,7 +14,7 @@ async function convert(filePath) {
   const fileName = path.basename(filePath, `.${IN_EXTENTION}`);
   const newFileName = `${fileName}.${OUT_EXTENTION}`;
   const basePath = path.dirname(filePath);
-  const absolutePath = path.join(basePath, newFileName);
+  // const absolutePath = path.join(basePath, newFileName);
 
   return new Promise((resolve, reject) => {
     const writeConfig = {
