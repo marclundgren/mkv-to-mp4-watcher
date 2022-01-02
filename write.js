@@ -5,17 +5,14 @@ const ffmpeg = require("fluent-ffmpeg");
 
 ffmpeg.setFfmpegPath(ffmpegPath);
 
-const write = (
-  {
-    fileName,
-    newFileName,
-    basePath,
-    inExtension,
-    outExtension = "mp4",
-    removeOriginal = false,
-  },
-  cb
-) => {
+const write = ({
+  fileName,
+  newFileName,
+  basePath,
+  inExtension,
+  outExtension = "mp4",
+  removeOriginal = false,
+}) => {
   const absolutePath = path.join(basePath, newFileName);
   console.log(`write: ${absolutePath}`);
 
