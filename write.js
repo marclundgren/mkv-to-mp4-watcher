@@ -22,6 +22,9 @@ const write = ({
       const command = ffmpeg(`${basePath}/${fileName}.${inExtension}`)
         .format(outExtension)
         .output(absolutePath)
+        .on("progress", function (progress) {
+          console.log("Processing: " + progress.percent + "% done");
+        })
         .on("end", () => {
           console.log(`done: ${absolutePath}`);
           if (removeOriginal) {
