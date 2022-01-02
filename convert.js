@@ -19,6 +19,7 @@ async function convert(filePath) {
       newFileName,
       basePath,
       inExtension: IN_EXTENTION,
+      // removeOriginal: true,
     };
     write(writeConfig, () => {
       console.log(`removing ${filePath}`);

@@ -6,7 +6,7 @@
   "scripts": {
     "push": "docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t marclundgren/node-mkv-to-mp4-watcher:latest --push .",
     "up": "docker build . -t marclundgren/node-mkv-to-mp4-watcher && docker-compose up",
-    "start": "clear && node --experimental-wasm-threads index.js",
+    "start": "clear && node index.js",
     "test": "clear && node test.js"
   },
   "author": "",
@@ -15,8 +15,8 @@
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@ffmpeg/core": "^0.10.0",
     "@ffmpeg/ffmpeg": "^0.10.1",
+    "async-mutex": "^0.3.2",
     "chokidar": "^3.5.2",
-    "fluent-ffmpeg": "^2.1.2",
-    "mutexify": "^1.4.0"
+    "fluent-ffmpeg": "^2.1.2"
   }
 }
