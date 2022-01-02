@@ -24,7 +24,7 @@ const write = ({
         .output(absolutePath)
         .on("progress", function (progress) {
           console.log(
-            `Processing newFileName: ${JSON.stringify(progress, null, 2)}`
+            `Processing ${newFileName}: ${JSON.stringify(progress, null, 2)}`
           );
         })
         .on("end", () => {
