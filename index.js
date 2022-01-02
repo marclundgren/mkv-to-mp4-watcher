@@ -10,11 +10,12 @@ const watchPath = process.env.DIR || "/watch";
 chokidar.watch([`${watchPath}/**/*.mkv`]).on("all", (event, filePath) => {
   console.log(`watch: ${event} ${filePath}`);
   if (event === "add") {
-    mutex.runExclusive(async () => {
+    mutex.runExclusive(() => {
       return convert(filePath)
         .catch(console.error)
         .then((res) => {
-          console.log(`done ${res}`);
+          console.log(`done ${filePath} ${res}`);
+          return res;
         });
     });
   }
