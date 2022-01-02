@@ -22,18 +22,18 @@ async function convert(filePath) {
       newFileName,
       basePath,
       inExtension: IN_EXTENTION,
-      // removeOriginal: true,
+      removeOriginal: true,
     };
-    write(writeConfig).then(() => {
-      console.log(`finished writing ${filePath}`);
+    write(writeConfig).then((newFilePath) => {
+      console.log(`finished writing ${newFilePath}`);
 
-      fs.chown(absolutePath, uid, gid, (err) => {
+      fs.chown(newFilePath, uid, gid, (err) => {
         if (err) {
           console.error(err);
           reject(err);
         } else {
-          console.log(`chown ${absolutePath}`);
-          resolve(absolutePath);
+          console.log(`chown ${newFilePath}`);
+          resolve(newFilePath);
         }
       });
     });
