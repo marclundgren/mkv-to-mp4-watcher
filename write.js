@@ -23,7 +23,7 @@ const write = ({
         .format(outExtension)
         .output(absolutePath)
         .on("progress", function (progress) {
-          console.log("Processing: " + progress.percent + "% done");
+          console.log("Processing: " + JSON.stringify(progress));
         })
         .on("end", () => {
           console.log(`done: ${absolutePath}`);
