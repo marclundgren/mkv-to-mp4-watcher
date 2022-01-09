@@ -21,3 +21,4 @@ WATCH="**/*.mkv" yarn start
 
 - ffmpeg.wasm isnt supported on raspberry pi (yet)
 - fluent-ffmpeg/node-fluent-ffmpeg is actively looking for maintainers so the goal is to get off this dependency
+- fluent-ffmpeg seems to be much faster than ffmpeg.wasm (tested on macbook pro)

@@ -13,7 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
-    "@ffmpeg/core": "^0.10.0",
     "@ffmpeg/ffmpeg": "^0.10.1",
     "async-mutex": "^0.3.2",
     "chokidar": "^3.5.2",

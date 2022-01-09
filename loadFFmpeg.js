@@ -7,7 +7,9 @@ function loadFFmpeg() {
   if (loaded) {
     return Promise.resolve({ ffmpeg, fetchFile });
   } else {
+    console.log("loading ffmpeg...");
     return ffmpeg.load().then(() => {
+      console.log("loaded ffmpeg");
       loaded = true;
       return { ffmpeg, fetchFile };
     });

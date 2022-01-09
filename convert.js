@@ -22,7 +22,7 @@ async function convert(filePath) {
       newFileName,
       basePath,
       inExtension: IN_EXTENTION,
-      removeOriginal: true,
+      removeOriginal: false,
     };
     write(writeConfig).then((newFilePath) => {
       console.log(`finished writing ${newFilePath}`);
